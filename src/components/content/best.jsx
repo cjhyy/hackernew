@@ -8,14 +8,16 @@ import './style.css'
 
 import MyCard from './card';
 const antIcon = <Icon type="loading" style={{ fontSize: 80 }} spin />;
-
+const rdom = require('react-dom'); 
 export default class Best extends Component {
 
     state ={
-        startindex:[],
+        startindex:0,
         loading:false,
         users:[],
-        errorMsg:null
+        errorMsg:null,
+        textarr:[],
+        reloading:false
     }
 
     componentDidMount() {
@@ -29,12 +31,15 @@ export default class Best extends Component {
         .then(Response =>{
             const result=Response.data
        
-            const users=result
-           const startindex=users.slice(0,50)
+            const users=result  
+            const {startindex} =this.state      
+            const textarr=users.slice(0,startindex+20)
+            // const startindex =startindex+30
             this.setState({
                 loading:false,
                 users,
-                startindex
+                startindex:startindex+20,
+                textarr
             })
            
         })
@@ -46,31 +51,40 @@ export default class Best extends Component {
             })
         })
     }
-    // handleScroll=() => {
-    //      const {users} =this.state  
-    //     // const ele = rdom.findDOMNode(this)
-    //     // console.log(ele.scrollHeight,ele.clientHeight)
-    //     // //   if(ele.scrollTop + ele.clientHeight >= ele.scrollHeight) {
-         
-    //     // //     console.log("scrolling down")
-    //     // //   }
-    //      let clientHeight = this.refs.Box.clientHeight; //可视区域高度
-    // let scrollTop  = this.refs.Box.scrollTop;  //滚动条滚动高度
-    // let scrollHeight = this.refs.Box.scrollHeight; //滚动内容高度
-    // if((clientHeight+scrollTop)==(scrollHeight-14)){ 
-    //     const startindex=users.slice(0,50)
-    //     this.setState({
-    //         // loading:true,
-    //         startindex
-    //     })
-    //     console.log(clientHeight,scrollTop,  scrollHeight)
-    //     }
-    //     // console.log(clientHeight,scrollTop,  scrollHeight)
-    // } 
-       
+    handleScroll=() => {
+         const {users,startindex,reloading} =this.state  
+        const event = rdom.findDOMNode(this)
+        const scrollTop = (event.srcElement ? event.srcElement.documentElement.scrollTop : false) || window.pageYOffset || (event.srcElement ? event.srcElement.body.scrollTop : 0);
+        const clientHeight = (event.srcElement && event.srcElement.documentElement.clientHeight) || document.body.clientHeight;
+        const scrollHeight = (event.srcElement && event.srcElement.documentElement.scrollHeight) || document.body.scrollHeight;
+        const height = scrollHeight - scrollTop - clientHeight;
+      
+        if (height <= (400)) 
+        { 
+        const textarr=users.slice(0,startindex+10)
+        // const startindex =startindex+30
+        this.setState({
+            reloading:true,
+            startindex:startindex+10,
+            textarr
+        })
+        setTimeout(
+           () => this.setState({
+                reloading:false
+            }),500
+        ) 
+        }
+       console.log(clientHeight,scrollTop,  scrollHeight)
+    } 
+      
     render() {
-           const {loading,users,errorMsg,startindex} =this.state  
-
+           const {loading,users,errorMsg,textarr,reloading} =this.state  
+           var loadd;
+           if (reloading) {
+             loadd = <Spin className="reload" indicator={antIcon} />
+           } else {
+             loadd = null;
+           }
          
         if (loading){
             return <Spin className="loading" indicator={antIcon} />
@@ -81,18 +95,15 @@ export default class Best extends Component {
         
         return (
             
-            <div className="row" onWheel={this.handleScroll} ref="Box">
+            <div className="row" onWheel={this.handleScroll} >
               {
                  
-                startindex.map( (use,index)=> <MyCard id={use} key={index} >aa</MyCard>)
-                  
-              }
-                 
-                      
-                  
-                  
-                       
-         
+                textarr.map( (use,index)=> <MyCard id={use} key={index} ></MyCard>)
+              
+              }    
+             {
+                loadd
+             }
             </div> 
          
         );

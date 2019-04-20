@@ -1,5 +1,6 @@
-import {Layout ,Button,Menu } from 'antd';
+import {Layout ,Button,Menu ,BackTop } from 'antd';
 import React, { Component } from 'react';
+
 import MyNavlink from './my-nav-link'
 import { NavLink,Switch,Route,Redirect,withRouter} from 'react-router-dom'
 import moment from 'moment';
@@ -19,12 +20,18 @@ const {
 const tabs = ['new', 'top', 'ask', 'show', 'best', 'job']
 class App extends Component {
 
+
+
     render() {
+
+
+     
+
         return (
           <div>
-          <Layout>
+          <Layout >
       <Header className="head" >
-         <h1 className="logo">Hacker News</h1>   
+         <h1 className="logo"   >Hacker News</h1>   
          <div className="list">
          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']} className="" className="menu" >
              {
@@ -40,7 +47,7 @@ class App extends Component {
          </div>
         
       </Header>
-      <Content className="main"  > 
+      <Content className="main"   > 
       <Switch>
     
     <Route path='/new' component={New} />
@@ -52,9 +59,11 @@ class App extends Component {
    <Redirect to="/new" />
  </Switch> 
       </Content>
-    
+   
     </Layout>
-               
+    
+    <BackTop visibilityHeight="100" />
+    
              </div>
         );
     }

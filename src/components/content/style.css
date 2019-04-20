@@ -3,3 +3,9 @@
     bottom: 100px;
     right: 100px;
 }
+.reload{
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+    font-size: 10px;
+}
