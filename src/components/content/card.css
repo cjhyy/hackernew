@@ -1,0 +1,29 @@
+.comment{
+   margin: 0;
+   padding: 0;
+    border:none;
+   
+}
+.comment-head{
+   padding: -5px;
+   border-radius: 10px;
+
+  
+  
+}
+.tag{
+    background-color: rgb(0, 134, 134);
+    border-radius: 15px;
+    color: aquamarine;
+}
+.item{
+    width: 80%;
+    margin: 10px auto;
+}
+.content{
+  margin-top: 10px;
+  color: #1890ff;
+  font-size: 14px;
+  text-align: left;
+ 
+}

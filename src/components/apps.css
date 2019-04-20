@@ -1,0 +1,32 @@
+.list-group-item{
+  color: white;
+  float: left;
+  font-size: 24px;
+  margin: 10px;
+}
+.list{
+ position: absolute;
+ left: 400px;
+ top:10px;
+}
+.logo{
+  font-size: 36px;
+  margin-top:20px;
+  float: left;
+  color: white;
+  position: relative;
+}
+.head{
+    background: #ff6600;
+    height: 100px;
+}
+.main{
+  height: 100%;
+}
+.bot{
+  position: fixed;
+  bottom: 0;
+}
+.activeclass{
+  color:black;
+}
