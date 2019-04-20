@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hackernew/precache-manifest.5be8fd7a6e473cc6b149407be9c20917.js"
+  "/hackernew/precache-manifest.1f7b1ee5a4c731bb70d7d709dcfb5f93.js"
 );
 
 workbox.clientsClaim();

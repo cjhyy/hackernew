@@ -1,15 +1,15 @@
 {
-  "main.css": "/hackernew/static/css/main.d9c10fba.chunk.css",
-  "main.js": "/hackernew/static/js/main.8d5af905.chunk.js",
-  "main.js.map": "/hackernew/static/js/main.8d5af905.chunk.js.map",
+  "main.css": "/hackernew/static/css/main.7d0524d3.chunk.css",
+  "main.js": "/hackernew/static/js/main.6c741811.chunk.js",
+  "main.js.map": "/hackernew/static/js/main.6c741811.chunk.js.map",
   "runtime~main.js": "/hackernew/static/js/runtime~main.e50e1d16.js",
   "runtime~main.js.map": "/hackernew/static/js/runtime~main.e50e1d16.js.map",
-  "static/css/2.77b738a8.chunk.css": "/hackernew/static/css/2.77b738a8.chunk.css",
-  "static/js/2.2bc563ad.chunk.js": "/hackernew/static/js/2.2bc563ad.chunk.js",
-  "static/js/2.2bc563ad.chunk.js.map": "/hackernew/static/js/2.2bc563ad.chunk.js.map",
+  "static/css/2.542fcec2.chunk.css": "/hackernew/static/css/2.542fcec2.chunk.css",
+  "static/js/2.b3a58ca1.chunk.js": "/hackernew/static/js/2.b3a58ca1.chunk.js",
+  "static/js/2.b3a58ca1.chunk.js.map": "/hackernew/static/js/2.b3a58ca1.chunk.js.map",
   "index.html": "/hackernew/index.html",
-  "precache-manifest.5be8fd7a6e473cc6b149407be9c20917.js": "/hackernew/precache-manifest.5be8fd7a6e473cc6b149407be9c20917.js",
+  "precache-manifest.1f7b1ee5a4c731bb70d7d709dcfb5f93.js": "/hackernew/precache-manifest.1f7b1ee5a4c731bb70d7d709dcfb5f93.js",
   "service-worker.js": "/hackernew/service-worker.js",
-  "static/css/2.77b738a8.chunk.css.map": "/hackernew/static/css/2.77b738a8.chunk.css.map",
-  "static/css/main.d9c10fba.chunk.css.map": "/hackernew/static/css/main.d9c10fba.chunk.css.map"
+  "static/css/2.542fcec2.chunk.css.map": "/hackernew/static/css/2.542fcec2.chunk.css.map",
+  "static/css/main.7d0524d3.chunk.css.map": "/hackernew/static/css/main.7d0524d3.chunk.css.map"
 }
