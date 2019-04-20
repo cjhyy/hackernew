@@ -1,4 +1,4 @@
-import {Layout ,Button } from 'antd';
+import {Layout ,Button,Menu } from 'antd';
 import React, { Component } from 'react';
 import MyNavlink from './my-nav-link'
 import { NavLink,Switch,Route,Redirect,withRouter} from 'react-router-dom'
@@ -26,12 +26,16 @@ class App extends Component {
       <Header className="head" >
          <h1 className="logo">Hacker News</h1>   
          <div className="list">
+         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']} className="" className="menu" >
              {
-                tabs.map(tab => (
-                        <MyNavlink to={tab} className="list-group-item" >{tab.toUpperCase()}</MyNavlink>
+                tabs.map((tab,index) => (
+                  <Menu.Item key={index}>
+                        <MyNavlink to={tab} className="list-group-item" activeClassName="active" >{tab.toUpperCase()}</MyNavlink>
+                        </Menu.Item>
                     ))
              }
            
+             </Menu>
        
          </div>
         
@@ -48,7 +52,7 @@ class App extends Component {
    <Redirect to="/new" />
  </Switch> 
       </Content>
-      <Footer className="bot">Footer</Footer>
+    
     </Layout>
                
              </div>

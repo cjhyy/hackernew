@@ -10,23 +10,29 @@
  top:10px;
 }
 .logo{
-  font-size: 36px;
-  margin-top:20px;
+  font-size: 40px;
+  margin-top:10px;
   float: left;
   color: white;
   position: relative;
 }
 .head{
-    background: #ff6600;
-    height: 100px;
+    background: #001529;
+    height: 80px;
+    /* position: fixed;
+    display: block;
+    z-index: 9999;
+    width: 100%; */
 }
 .main{
   height: 100%;
 }
-.bot{
-  position: fixed;
-  bottom: 0;
-}
-.activeclass{
+
+.active{
   color:black;
+}
+.menu{
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 20px;
 }
