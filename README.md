@@ -1,2 +1,2 @@
 ## HackerNews
-[Hacker News](https://cjhyy.github.io/hackernews)
+[Hacker News](https://cjhyy.github.io/hackernew)
